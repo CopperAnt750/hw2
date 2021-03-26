@@ -27,6 +27,12 @@ public class Main {
 
         System.out.println("Sum = " + Money.addMoney(m1, m2));
         System.out.println("Sub = " + Money.subMoney(m1, m2));
+        System.out.println("divisionOfSums " + Money.divisionOfSums(m1, m2));
+        System.out.println("divisionDouble = " + Money.divisionDouble(m1, 2.0));
+        System.out.println("mul = " + Money.mul(m1, 2.0));
+        System.out.println("Money compare " + Money.moneyCompare(m1, m2));
+
+
 
 
     }
