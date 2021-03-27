@@ -1,6 +1,6 @@
 package hw2;
 
-public class numberOfInstance {
+public class NumberOfInstance {
 
     private static int count;
 
@@ -8,7 +8,7 @@ public class numberOfInstance {
         return count;
     }
 
-    public numberOfInstance() {
+    public NumberOfInstance() {
         count++;
     }
 }

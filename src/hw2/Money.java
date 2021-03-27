@@ -25,15 +25,18 @@ public class Money {
     }
 
     public static Money subMoney(Money m1, Money m2) {
-        long resauliHryvnias = m1.hryvnias - m2.hryvnias;
+        long resHryvnias = m1.hryvnias - m2.hryvnias;
+        if (resHryvnias <= 0) {
+
+        }
         byte resaultKopeck = 0;
         if (m1.kopeck >= m2.kopeck) {
             resaultKopeck = (byte) (m1.kopeck - m2.kopeck);
         } else {
-            resauliHryvnias--;
+            resHryvnias--;
             resaultKopeck = (byte) ((m1.kopeck + 100) - m2.kopeck);
         }
-        return new Money(resauliHryvnias, resaultKopeck);
+        return new Money(resHryvnias, resaultKopeck);
     }
 
     public static double moneyToDouble(Money m) {
@@ -79,9 +82,6 @@ public class Money {
 
     @Override
     public String toString() {
-        return "Money{" +
-                "hryvnias=" + hryvnias +
-                ", kopeck=" + kopeck +
-                '}';
+        return hryvnias + ", " + kopeck ;
     }
 }
