@@ -1,10 +1,12 @@
 package hw2;
 
+import static java.lang.Math.PI;
+
 public class Circle {
 
     private static int instanceCount = 0;
     private double radius = 0;
-    private static double PI = 3.14d;
+
 
     public static int getInstanceCount() {
         return instanceCount;
@@ -20,6 +22,6 @@ public class Circle {
     }
 
     public static double calculateCircleSquare(double radius) {
-        return PI * radius * radius;
+        return PI * Math.pow(radius, 2);
     }
 }

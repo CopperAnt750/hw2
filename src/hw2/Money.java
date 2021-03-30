@@ -84,4 +84,13 @@ public class Money {
     public String toString() {
         return hryvnias + ", " + kopeck ;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Money) {
+            Money secondMoney = (Money) obj;
+            return this.hryvnias == secondMoney.hryvnias && this.kopeck == secondMoney.kopeck;
+        }
+        return false;
+    }
 }
